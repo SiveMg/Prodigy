@@ -21,14 +21,21 @@ for i in range(len(exp)):
         continue
     if(sum(lst) < 500000):      # add all the values until the 500k mark is reached
         lst.append(amount[i])
-        indexes.append(lst.index(amount[i]))
+        indexes.append(amount.index(amount[i]))
+        print(lst.index(amount[i]), amount[i])
+        
         
     else:
         if(amount[i] < max(lst)):
-            lst.remove(max(lst))
             indexes.remove(lst.index(max(lst)))
+            lst.remove(max(lst))
+            print(lst, indexes)
             lst.append(amount[i])
-            indexes.append(indexes.index(amount[i]))
+            indexes.append(amount.index(amount[i]))
+            indexes.append(lst.index(amount[i]))
+            print(lst, indexes)
             
-print(indexes, '\n\n\n\n')
+                                                
+            
+print(indexes, '\n')
 print(lst)
