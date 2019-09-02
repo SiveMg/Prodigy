@@ -1,4 +1,3 @@
-"""Processing loans.csv from Prodigy Finance"""
 """Sivenathi Mgudlwa"""
 
 import csv
